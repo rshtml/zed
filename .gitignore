@@ -1,0 +1,21 @@
+target
+grammars
+
+# Rust temporary files
+*.rs.bk
+*.pdb
+
+# Editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS specific files
+.DS_Store
+
+# Log files
+*.log
+
+# Compiled WebAssembly files (build artifacts)
+*.wasm

@@ -1,0 +1,3 @@
+name = "RsHtml"
+grammar = "rshtml"
+path_suffixes = ["rs.html"]

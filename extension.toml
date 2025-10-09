@@ -1,0 +1,27 @@
+id = "rshtml"
+name = "RsHtml"
+version = "0.1.3"
+schema_version = 1
+authors = ["mehmetkesik"]
+description = "RsHtml Template Language Support"
+repository = "https://github.com/rshtml/zed"
+
+[grammars.rshtml]
+repository = "https://github.com/rshtml/tree-sitter-rshtml"
+rev = "8379a7d67c67fca21d5a45c4329eb2f61743417e"
+
+[language_servers.rshtml-analyzer]
+name = "RsHtml"
+languages = ["RsHtml"]
+
+[language_servers.rshtml-analyzer.language_ids]
+"RsHtml" = "rshtml"
+
+[language_servers.vscode-html-language-server]
+name = "vscode-html-language-server"
+languages = ["RsHtml", "HTML"]
+
+[language_servers.vscode-html-language-server.language_ids]
+"HTML" = "html"
+"CSS" = "css"
+"RsHtml" = "rshtml"
