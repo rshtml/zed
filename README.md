@@ -22,7 +22,7 @@ cargo install --git https://github.com/rshtml/rshtml-analyzer.git --tag v0.1.3
 
 ## Getting Started
 
-1.  Install the extension from the Zed Marketplace.
+1.  Install the extension from the Zed Extensions.
 2.  Open a project containing `.rs.html` files.
 3.  The extension will automatically activate and provide language support.
 
