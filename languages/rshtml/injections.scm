@@ -4,8 +4,8 @@
 ;   ; (#set! injection.include-children)
 ;   ; (#set! injection.combined))
 
-((source_file) @injection.content
-  (#set! injection.language "html"))
+; ((source_file) @injection.content
+;   (#set! injection.language "html"))
 
 (html_text
   text: (source_text) @injection.content
