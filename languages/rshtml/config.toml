@@ -3,7 +3,7 @@ grammar = "rshtml"
 path_suffixes = ["rs.html"]
 
 autoclose_before = ">})"
-block_comment = { start = "<!--", prefix = "", end = "-->", tab_size = 0 }
+block_comment = { start = "@*", prefix = "", end = "*@", tab_size = 0 }
 wrap_characters = { start_prefix = "<", start_suffix = ">", end_prefix = "</", end_suffix = ">" }
 brackets = [
   { start = "{", end = "}", close = true, newline = true },
