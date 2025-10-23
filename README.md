@@ -16,7 +16,7 @@ The extension first checks if `rshtml-analyzer` is available in your system's PA
 
 If you want to install the `rshtml-analyzer` yourself, you can do so with the following command:
 ```bash
-cargo install --git https://github.com/rshtml/rshtml-analyzer.git --tag v0.1.3
+cargo install --git https://github.com/rshtml/rshtml-analyzer.git --tag v0.1.5
 ```
 *Note: The tag can be updated according to the version.*
 
