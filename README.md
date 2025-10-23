@@ -1,5 +1,7 @@
 # RsHtml for Zed
 
+[![Zed Marketplace](https://img.shields.io/github/v/release/rshtml/zed?style=for-the-badge&label=Zed%20Extensions)](https://zed.dev/extensions/rshtml)
+
 This extension provides official language server support for the [RsHtml](https://github.com/rshtml/rshtml) templating engine in Zed.
 
 ## Features
