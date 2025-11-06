@@ -10,6 +10,7 @@ const LS_VERSION_FILE: &str = "ls_version";
 
 struct RsHtmlExtension {
     html_extension: HtmlExtension,
+    cached: bool,
 }
 
 impl RsHtmlExtension {
@@ -103,12 +104,25 @@ impl RsHtmlExtension {
             path
         } else {
             if self.server_exist() {
-                if let Some(github_release) = self.check_update(language_server_id)? {
-                    self.download(language_server_id, &github_release.version)?;
+                if !self.cached {
+                    self.cached = true;
+                    if let Ok(github_release_option) = self.check_update(language_server_id) {
+                        if let Some(github_release) = github_release_option {
+                            self.download(language_server_id, &github_release.version)?;
+                        }
+                    } else {
+                        zed::set_language_server_installation_status(
+                            language_server_id,
+                            &zed::LanguageServerInstallationStatus::Failed(
+                                "Checking for updates failed.".to_owned(),
+                            ),
+                        );
+                    }
                 }
             } else {
                 let github_release = self.lastest_github_release()?;
                 self.download(language_server_id, &github_release.version)?;
+                self.cached = true;
             }
 
             env::current_dir()
@@ -130,6 +144,7 @@ impl zed::Extension for RsHtmlExtension {
     fn new() -> Self {
         Self {
             html_extension: HtmlExtension::new(),
+            cached: false,
         }
     }
 
