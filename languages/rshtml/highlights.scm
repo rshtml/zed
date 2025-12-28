@@ -19,31 +19,12 @@
 (continue_) @keyword
 (break_) @keyword
 
-(
-  (start_symbol) @keyword
-  .
-  (extends_) @keyword
-)
-
 (raw_) @keyword
-
-(
-  (start_symbol) @keyword
-  .
-  (include_directive (include_) @keyword)
-)
-
-(render_) @keyword
-(render_body_) @keyword
 (child_content_) @keyword
-(section_) @keyword
-
-(section_block
-  name: (rust_identifier) @type)
 
 (as_) @keyword
 (as_clause
-  alias: (rust_identifier) @type)
+  alias: (component_tag_identifier) @type)
 (
   (start_symbol) @keyword
   .
@@ -105,6 +86,8 @@
   .
   (match_stmt)
 )
+
+(param_name) @variable
 
 ;this is for now extra
 (else_clause

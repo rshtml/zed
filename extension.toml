@@ -1,6 +1,6 @@
 id = "rshtml"
 name = "RsHtml"
-version = "0.1.4"
+version = "0.1.5"
 schema_version = 1
 authors = ["rshtml"]
 description = "RsHtml Template Language Support"
@@ -8,7 +8,7 @@ repository = "https://github.com/rshtml/zed"
 
 [grammars.rshtml]
 repository = "https://github.com/rshtml/tree-sitter-rshtml"
-rev = "89ae0f3a5e221a83aad243def85e822616d3b3c2"
+rev = "363c52c1630c491a5094ef5b369f12b4b858392a"
 
 [language_servers.rshtml-analyzer]
 name = "RsHtml"
