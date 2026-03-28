@@ -6,20 +6,14 @@
 (open_brace) @punctuation.bracket
 (close_brace) @punctuation.bracket
 
-(fat_arrow) @operator
 (semicolon) @punctuation.delimiter
 (equals) @punctuation.delimiter
 
 (string_line) @string
 
-(comment_block) @comment
-(open_comment) @operator
-(close_comment) @operator
-
 (continue_) @keyword
 (break_) @keyword
 
-(raw_) @keyword
 (child_content_) @keyword
 
 (as_) @keyword
@@ -80,11 +74,6 @@
   (start_symbol) @keyword
   .
   (while_stmt)
-)
-(
-  (start_symbol) @keyword
-  .
-  (match_stmt)
 )
 
 (param_name) @variable
